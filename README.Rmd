@@ -117,9 +117,11 @@ ggplot(data%>%filter(month==5))+
     aes(fill=total_rainfall_mm),
     color=NA
   )+
-  scale_fill_steps(
-    low = "#f5c900",
-    high = "#183182",
+  scale_fill_steps2(
+    low = "#F8CF6A",
+    mid = "#2178dd",
+    high = "#0F3A6B",
+    midpoint = 150,
     breaks=seq(50,200,50)
   )+
   facet_wrap(.~year)+
