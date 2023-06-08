@@ -16,7 +16,7 @@ a tibble with the hexagon number ("hex_id" column) and the selected features val
 Add static data layer (not updated from year to year), based on the spatial grid of the map obtained by the get_map() function
 }
 \examples{
-# Add soil features to grid then plot clay content
+# Get soil features and plot clay content
 library(sf)
 library(tidyverse)
 
@@ -25,4 +25,11 @@ get_map()\%>\%
   ggplot()+
   geom_sf(aes(fill=clay_0to30cm_percent)) 
 
+}
+\references{
+\itemize{
+\item Soil features from \href{https://soilgrids.org/}{SoilGrids}
+\item Crop distribution from the Land-Parcel Identification System (\href{https://www.data.gouv.fr/fr/datasets/registre-parcellaire-graphique-rpg-contours-des-parcelles-et-ilots-culturaux-et-leur-groupe-de-cultures-majoritaire/}{Registre Parcellaire Graphique} in France) of the European Common Agricultural Policy
+\item Herd density from \href{https://agreste.agriculture.gouv.fr/agreste-web/}{Agreste}. Compared with other data sources, this information has a less precise resolution (departmental scale).
+}
 }

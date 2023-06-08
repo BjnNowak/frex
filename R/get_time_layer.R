@@ -12,7 +12,7 @@
 #' @import tidyverse 
 #' 
 #' @references 
-#' Climate data from [ERA5](https://developers.google.com/earth-engine/datasets/catalog/ECMWF_ERA5_MONTHLY)
+#' Climate data from [ERA5](https://developers.google.com/earth-engine/datasets/catalog/ECMWF_ERA5_MONTHLY) (Copernicus Climate Change Service)
 #'
 #' @examples
 #'# Get mean temperature from 2000 to 2020 and filter for May only

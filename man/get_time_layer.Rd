@@ -29,5 +29,5 @@ data<-get_time_layer("temperature",from=2000, to=2020)\%>\%
 
 }
 \references{
-Climate data from \href{https://developers.google.com/earth-engine/datasets/catalog/ECMWF_ERA5_MONTHLY}{ERA5}
+Climate data from \href{https://developers.google.com/earth-engine/datasets/catalog/ECMWF_ERA5_MONTHLY}{ERA5} (Copernicus Climate Change Service)
 }

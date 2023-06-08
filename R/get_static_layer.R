@@ -8,8 +8,13 @@
 #' @import sf
 #' @import tidyverse
 #' 
+#' @references 
+#' - Soil features from [SoilGrids](https://soilgrids.org/)
+#' - Crop distribution from the Land-Parcel Identification System ([Registre Parcellaire Graphique](https://www.data.gouv.fr/fr/datasets/registre-parcellaire-graphique-rpg-contours-des-parcelles-et-ilots-culturaux-et-leur-groupe-de-cultures-majoritaire/) in France) of the European Common Agricultural Policy
+#' - Herd density from [Agreste](https://agreste.agriculture.gouv.fr/agreste-web/). Compared with other data sources, this information has a less precise resolution (departmental scale). 
+#'
 #' @examples
-#'# Add soil features to grid then plot clay content
+#'# Get soil features and plot clay content
 #'library(sf)
 #'library(tidyverse)
 #'
