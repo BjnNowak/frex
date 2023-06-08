@@ -99,8 +99,8 @@ As expected, there is a positive correlation between the number of cows
 per km<sup>2</sup> and the corn silage area, as it is one of the fodders
 given to animals.
 
-This is not the case when comparing cow density with rapeseed, a crop
-more traditionally associated with farms without livestock:
+This is not the case when comparing cow density with rapeseed area, a
+crop more traditionally associated with farms without livestock:
 
     ggplot(data,aes(x=cow_density_km2,y=rapeseed_area_km2))+
       geom_point()+
@@ -108,3 +108,31 @@ more traditionally associated with farms without livestock:
       theme_light()
 
 ![](README_files/figure-markdown_strict/unnamed-chunk-5-1.png)
+
+# 3. Time series data layers
+
+Adding time series layers works in the same way as adding “static”
+layers, except that the **get\_time\_layer()** function has two
+additional arguments (*from* and *to*) to delimit the years bordering
+the selection.
+
+Let’s use this function to compare the total rainfall in May for the
+last years available in the dataset:
+
+    data<-get_map()%>%
+      left_join(get_time_layer(layer="rainfall",from=2015,to=2020))
+
+    ggplot(data%>%filter(month==5))+
+      geom_sf(
+        aes(fill=total_rainfall_mm),
+        color=NA
+      )+
+      scale_fill_steps(
+        low = "#f5c900",
+        high = "#183182",
+        breaks=seq(50,200,50)
+      )+
+      facet_wrap(.~year)+
+      theme_void()
+
+![](README_files/figure-markdown_strict/unnamed-chunk-6-1.png)
