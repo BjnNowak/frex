@@ -28,7 +28,7 @@ The package may be downloaded from GitHub. It may also be downloaded directly fr
 
 ```{r setup, warning=FALSE, message=FALSE}
 # Installation directly with R (to use only once):
-# devtools::install_github("BjnNowak/bertin")
+# devtools::install_github("BjnNowak/frex")
 
 # Once installed, you may load it into your R session
 library(frex)
