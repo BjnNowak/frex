@@ -1,4 +1,4 @@
-# {frex}
+# {frex} package
 
 {frex} stands for “FRench hEXagons”.
 
