@@ -79,6 +79,9 @@ Below an example to get the distribution of sunflower crops in France.
 
 ![](README_files/figure-markdown_strict/unnamed-chunk-3-1.png)
 
+But we can also conduct analyses without using the base map to plot
+data, simply by confronting two data layers.
+
     # Start with farm animal density
     data<-get_static_layer(layer="herds")%>%
       # Join static layer with crops distribution
@@ -91,3 +94,17 @@ Below an example to get the distribution of sunflower crops in France.
       theme_light()
 
 ![](README_files/figure-markdown_strict/unnamed-chunk-4-1.png)
+
+As expected, there is a positive correlation between the number of cows
+per km<sup>2</sup> and the corn silage area, as it is one of the fodders
+given to animals.
+
+This is not the case when comparing cow density with sugarbeet, a crop
+more traditionally associated with farms without livestock:
+
+    ggplot(data,aes(x=cow_density_km2,y=sugarbeet_area_km2))+
+      geom_point()+
+      geom_smooth(method='lm')+
+      theme_light()
+
+![](README_files/figure-markdown_strict/unnamed-chunk-5-1.png)
