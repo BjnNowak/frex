@@ -13,3 +13,9 @@ gridded hexagonal map of metropolitan France
 Function to add the gridded hexagonal map of metropolitan France.
 This function has no argument
 }
+\examples{
+# Load map
+get_map()\%>\%
+ggplot()+
+geom_sf()
+}
