@@ -1,12 +1,19 @@
 Package: frex
-Title: What the Package Does (One Line, Title Case)
+Title: frex provides several layers of information for metropolitan France, particularly useful for analyzing agricultural systems
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Benjamin", "Nowak", , "bjn.nowak@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-0860-5683"))
+Description: frex stands for "FRench hEXagons". The basis of this package is a gridded map of France in hexagons of about 450 km2. For each hexagon, different information can be added using the package function, such as the surface area occupied by different types of crop, the nature of the soil or climatic data. The data is not included in the package itself, but is called up via URL. It therefore requires an Internet connection to operate.
+License: GPL-3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+VignetteBuilder: knitr
+Imports: tidyverse, sf
+LazyData: true
+Config/testthat/edition: 3
