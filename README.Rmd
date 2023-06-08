@@ -10,6 +10,8 @@ knitr::opts_chunk$set(
 )
 ```
 
+# {frex}
+
 {frex} stands for "FRench hEXagons". 
 
 The goal of this package is to provide several layers of information for metropolitan France, particularly useful for analyzing agricultural systems.
@@ -41,7 +43,7 @@ library(sf)
 
 The package is based on a hexagonal grid of metropolitan france, to which data layers can be added. This grid may be loaded as follows, using the **get_map()** function:
 
-```{r}
+```{r, warning=FALSE, message=FALSE}
 hex<-get_map() # No argument
 
 # Plot hexagonal grid
@@ -58,7 +60,7 @@ Different type of data may be added this way ("soil" for soil feature, "crops" f
 
 Below an example to get the distribution of sunflower crops in France.
 
-```{r}
+```{r, warning=FALSE, message=FALSE}
 hex<-get_map()%>%
   # Join static layer with the hexagonal grid
   left_join(get_static_layer(layer="crops"))
@@ -75,12 +77,15 @@ ggplot(hex)+
 ```
 
 
-```{r}
-hex<-get_map()%>%
-  # Join static layer with the hexagonal grid
+```{r, warning=FALSE, message=FALSE}
+# Start with farm animal density
+data<-get_static_layer(layer="herds")%>%
+  # Join static layer with crops distribution
   left_join(get_static_layer(layer="crops"))
 
-ggplot(hex)+
-  geom_sf(aes(fill=sunflower_area_km2))+
-  theme_void()
+# Compare the two data
+ggplot(data,aes(x=cow_density_km2,y=corn_silage_area_km2))+
+  geom_point()+
+  geom_smooth(method='lm')+
+  theme_light()
 ```

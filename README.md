@@ -1,3 +1,5 @@
+# {frex}
+
 {frex} stands for “FRench hEXagons”.
 
 The goal of this package is to provide several layers of information for
@@ -64,14 +66,6 @@ Below an example to get the distribution of sunflower crops in France.
     hex<-get_map()%>%
       # Join static layer with the hexagonal grid
       left_join(get_static_layer(layer="crops"))
-    #> Rows: 1542 Columns: 10
-    #> ── Column specification ────────────────────────────────────────────────────────
-    #> Delimiter: ","
-    #> dbl (10): hex_id, soft_wheat_area_km2, hard_wheat_area_km2, corn_grain_area_...
-    #> 
-    #> ℹ Use `spec()` to retrieve the full column specification for this data.
-    #> ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-    #> Joining with `by = join_by(hex_id)`
 
     ggplot(hex)+
       geom_sf(
@@ -85,20 +79,15 @@ Below an example to get the distribution of sunflower crops in France.
 
 ![](README_files/figure-markdown_strict/unnamed-chunk-3-1.png)
 
-    hex<-get_map()%>%
-      # Join static layer with the hexagonal grid
+    # Start with farm animal density
+    data<-get_static_layer(layer="herds")%>%
+      # Join static layer with crops distribution
       left_join(get_static_layer(layer="crops"))
-    #> Rows: 1542 Columns: 10
-    #> ── Column specification ────────────────────────────────────────────────────────
-    #> Delimiter: ","
-    #> dbl (10): hex_id, soft_wheat_area_km2, hard_wheat_area_km2, corn_grain_area_...
-    #> 
-    #> ℹ Use `spec()` to retrieve the full column specification for this data.
-    #> ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-    #> Joining with `by = join_by(hex_id)`
 
-    ggplot(hex)+
-      geom_sf(aes(fill=sunflower_area_km2))+
-      theme_void()
+    # Compare the two data
+    ggplot(data,aes(x=cow_density_km2,y=corn_silage_area_km2))+
+      geom_point()+
+      geom_smooth(method='lm')+
+      theme_light()
 
 ![](README_files/figure-markdown_strict/unnamed-chunk-4-1.png)
