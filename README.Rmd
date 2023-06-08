@@ -1,10 +1,6 @@
 ---
 title: "{frex} package vignette"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{how-to-use-frex}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+output: md_document
 ---
 
 ```{r, include = FALSE}
