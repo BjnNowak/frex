@@ -93,10 +93,10 @@ ggplot(data,aes(x=cow_density_km2,y=corn_silage_area_km2))+
 
 As expected, there is a positive correlation between the number of cows per km<sup>2</sup> and the corn silage area, as it is one of the fodders given to animals. 
 
-This is not the case when comparing cow density with sugarbeet, a crop more traditionally associated with farms without livestock:
+This is not the case when comparing cow density with rapeseed, a crop more traditionally associated with farms without livestock:
 
 ```{r, warning=FALSE, message=FALSE}
-ggplot(data,aes(x=cow_density_km2,y=sunflower_area_km2))+
+ggplot(data,aes(x=cow_density_km2,y=rapeseed_area_km2))+
   geom_point()+
   geom_smooth(method='lm')+
   theme_light()
