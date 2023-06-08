@@ -57,6 +57,7 @@ This base map can be enhanced by adding several layers of data.
 Static data layer (not updated from year to year) may be added with the **get_static_layer()** function.
 
 Different type of data may be added this way:
+
 - "soil" for soil feature;
 - "crops" for main crops distribution;
 - "herds" for farm animal density). 
