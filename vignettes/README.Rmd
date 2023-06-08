@@ -1,0 +1,51 @@
+---
+title: "{frex} package vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{how-to-use-frex}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+{frex} stands for "FRench hEXagons". 
+
+The goal of this package is to provide several layers of information for metropolitan France, particularly useful for analyzing agricultural systems.
+
+The basis of this package is a gridded map of France in hexagons of about 450 km2. For each hexagon, different information can be added using the package function, such as the surface area occupied by different types of crop, the nature of the soil or climatic data. 
+
+The data is not included in the package itself, but is called up via URL. It therefore requires an Internet connection to operate.
+
+# 1. Package installation
+
+The package may be downloaded from GitHub. It may also be downloaded directly from R with the following command: 
+
+```{r setup, warning=FALSE, message=FALSE}
+# Installation directly with R (to use only once):
+# devtools::install_github("BjnNowak/bertin")
+
+# Once installed, you may load it into your R session
+library(frex)
+
+# Two other packages will be useful to process the data: {tidyverse} and {sf}
+library(tidyverse)
+library(sf)
+
+```
+
+
+
+```{r}
+
+hex<-get_map()
+
+ggplot(hex)+
+  geom_sf()
+
+```
