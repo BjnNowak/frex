@@ -2,5 +2,6 @@
 
 export(get_map)
 export(get_static_layer)
+export(get_time_layer)
 import(sf)
 import(tidyverse)
