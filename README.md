@@ -102,7 +102,7 @@ given to animals.
 This is not the case when comparing cow density with sugarbeet, a crop
 more traditionally associated with farms without livestock:
 
-    ggplot(data,aes(x=cow_density_km2,y=sugarbeet_area_km2))+
+    ggplot(data,aes(x=cow_density_km2,y=sunflower_area_km2))+
       geom_point()+
       geom_smooth(method='lm')+
       theme_light()
