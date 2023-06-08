@@ -2,12 +2,12 @@
 % Please edit documentation in R/get_map.R
 \name{get_map}
 \alias{get_map}
-\title{Load}
+\title{Load base gridded hexagonal map for metropolitan France}
 \usage{
 get_map()
 }
 \value{
-gridded hexagonal map of metropolitan France
+a sf object with gridded hexagonal map for metropolitan France
 }
 \description{
 Function to add the gridded hexagonal map of metropolitan France.
@@ -15,6 +15,9 @@ This function has no argument
 }
 \examples{
 # Plot the map
+library(sf)
+library(tidyverse)
+
 get_map()\%>\%
   ggplot()+
   geom_sf()

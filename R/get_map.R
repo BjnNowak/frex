@@ -1,13 +1,17 @@
-#'Load 
+#'Load base gridded hexagonal map for metropolitan France
 #' 
 #'Function to add the gridded hexagonal map of metropolitan France. 
 #'This function has no argument
 #'
-#' @return gridded hexagonal map of metropolitan France
+#' @return a sf object with gridded hexagonal map for metropolitan France
 #' @import sf
+#' @import tidyverse
 #'
 #' @examples
 #' # Plot the map
+#'library(sf)
+#'library(tidyverse)
+#'
 #'get_map()%>%
 #'   ggplot()+
 #'   geom_sf()
