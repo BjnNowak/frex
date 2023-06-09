@@ -142,3 +142,16 @@ last years available in the dataset:
       theme_void()
 
 ![](README_files/figure-markdown_strict/unnamed-chunk-6-1.png)
+
+# References
+
+-   Soil features from [SoilGrids](https://soilgrids.org/)
+-   Crop distribution from the Land-Parcel Identification System
+    ([Registre Parcellaire
+    Graphique](https://www.data.gouv.fr/fr/datasets/registre-parcellaire-graphique-rpg-contours-des-parcelles-et-ilots-culturaux-et-leur-groupe-de-cultures-majoritaire/)
+    in France) of the European Common Agricultural Policy
+-   Herd density from
+    [Agreste](https://agreste.agriculture.gouv.fr/agreste-web/)
+-   Climate data from
+    [ERA5](https://developers.google.com/earth-engine/datasets/catalog/ECMWF_ERA5_MONTHLY)
+    (Copernicus Climate Change Service)
