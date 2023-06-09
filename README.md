@@ -15,9 +15,9 @@ The data is not included in the package itself, but is called up via
 URL. It therefore requires an Internet connection to operate.
 
 Package data can be used to illustrate the diversity of French farming
-systems. They can also be used to enrich other datasets (e.g. to add
-pedoclimatic characteristics to studied agricultural plots), as we have
-done in this
+systems. They can also be used to enrich other datasets for multivariate
+analysis (e.g. to add pedoclimatic characteristics to studied
+agricultural plots), as we did in this
 [article](https://link.springer.com/article/10.1007/s13593-022-00770-y).
 
 # 1. Package installation
@@ -113,6 +113,10 @@ crop more traditionally associated with farms without livestock:
 
 ![](README_files/figure-markdown_strict/unnamed-chunk-5-1.png)
 
+for all these examples, table joins are based on the “hex\_id” column
+(which identifies the hexagon to which the data is associated), so it’s
+best not to change the name of this column.
+
 # 3. Time series data layers
 
 Adding time series layers works in the same way as adding “static”
@@ -142,6 +146,10 @@ last years available in the dataset:
       theme_void()
 
 ![](README_files/figure-markdown_strict/unnamed-chunk-6-1.png)
+
+As shown above, May 2016 was a particularly wet month.
+
+I’ll be adding more data layers over time.
 
 # References
 

@@ -20,7 +20,7 @@ The basis of this package is a gridded map of France in hexagons of about 450 km
 
 The data is not included in the package itself, but is called up via URL. It therefore requires an Internet connection to operate.
 
-Package data can be used to illustrate the diversity of French farming systems. They can also be used to enrich other datasets (e.g. to add pedoclimatic characteristics to studied agricultural plots), as we have done in this [article](https://link.springer.com/article/10.1007/s13593-022-00770-y).
+Package data can be used to illustrate the diversity of French farming systems. They can also be used to enrich other datasets for multivariate analysis (e.g. to add pedoclimatic characteristics to studied agricultural plots), as we did in this [article](https://link.springer.com/article/10.1007/s13593-022-00770-y).
 
 # 1. Package installation
 
@@ -108,6 +108,8 @@ ggplot(data,aes(x=cow_density_km2,y=rapeseed_area_km2))+
   theme_light()
 ```
 
+for all these examples, table joins are based on the "hex_id" column (which identifies the hexagon to which the data is associated), so it's best not to change the name of this column. 
+
 # 3. Time series data layers
 
 Adding time series layers works in the same way as adding "static" layers, except that the **get_time_layer()** function has two additional arguments (*from* and *to*) to delimit the years bordering the selection.
@@ -134,6 +136,9 @@ ggplot(data%>%filter(month==5))+
   theme_void()
 ```
 
+As shown above, May 2016 was a particularly wet month.
+
+I'll be adding more data layers over time.
 
 # References
 
