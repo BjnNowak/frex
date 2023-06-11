@@ -57,7 +57,8 @@ Static data layer (not updated from year to year) may be added with the
 Different type of data may be added this way:
 
 -   “soil” for soil feature;
--   “crops” for main crops distribution;
+-   “crops” for main crops distribution (conventional or organic);
+-   “organic” for organic crops distribution;
 -   “herds” for farm animal density.
 
 The distribution of crops and animals can vary over time, but an initial
@@ -158,6 +159,8 @@ I’ll be adding more data layers over time.
     ([Registre Parcellaire
     Graphique](https://www.data.gouv.fr/fr/datasets/registre-parcellaire-graphique-rpg-contours-des-parcelles-et-ilots-culturaux-et-leur-groupe-de-cultures-majoritaire/)
     in France) of the European Common Agricultural Policy
+-   Organic crop distribution from [Agence
+    Bio](https://www.data.gouv.fr/fr/datasets/parcelles-en-agriculture-biologique-ab-declarees-a-la-pac/)
 -   Herd density from
     [Agreste](https://agreste.agriculture.gouv.fr/agreste-web/)
 -   Climate data from

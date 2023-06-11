@@ -11,6 +11,7 @@
 #' @references 
 #' - Soil features from [SoilGrids](https://soilgrids.org/)
 #' - Crop distribution from the Land-Parcel Identification System ([Registre Parcellaire Graphique](https://www.data.gouv.fr/fr/datasets/registre-parcellaire-graphique-rpg-contours-des-parcelles-et-ilots-culturaux-et-leur-groupe-de-cultures-majoritaire/) in France) of the European Common Agricultural Policy
+#' - Organic crop distribution from [Agence Bio](https://www.data.gouv.fr/fr/datasets/parcelles-en-agriculture-biologique-ab-declarees-a-la-pac/)
 #' - Herd density from [Agreste](https://agreste.agriculture.gouv.fr/agreste-web/). Compared with other data sources, this information has a less precise resolution (departmental scale). 
 #'
 #' @examples
@@ -29,11 +30,13 @@ get_static_layer<-function(layer){
     name=c(
       'soil', #1
       'crops', #2
-      'herds' #3
+      'organic', #2
+      'herds' #4
     ),
     url=c(
       'https://raw.githubusercontent.com/BjnNowak/frex_db/main/data/soil/soil_properties.csv', #1
       'https://raw.githubusercontent.com/BjnNowak/frex_db/main/data/crop/crop_distribution.csv', #2
+      'https://raw.githubusercontent.com/BjnNowak/frex_db/main/data/crop/organic_crop_distribution.csv', #3
       'https://raw.githubusercontent.com/BjnNowak/frex_db/main/data/herds/herds_density.csv' #3
     )
   )%>%
