@@ -167,6 +167,8 @@ I’ll be adding more data layers over time.
     Bio](https://www.data.gouv.fr/fr/datasets/parcelles-en-agriculture-biologique-ab-declarees-a-la-pac/)
 -   Herd density from
     [Agreste](https://agreste.agriculture.gouv.fr/agreste-web/)
+-   Human population density from [Global Human Settlement
+    Layer](https://ghsl.jrc.ec.europa.eu/download.php?ds=pop)
 -   Climate data from
     [ERA5](https://developers.google.com/earth-engine/datasets/catalog/ECMWF_ERA5_MONTHLY)
     (Copernicus Climate Change Service)
