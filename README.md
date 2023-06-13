@@ -59,7 +59,11 @@ Different type of data may be added this way:
 -   “soil” for soil feature;
 -   “crops” for main crops distribution (conventional or organic);
 -   “organic” for organic crops distribution;
--   “herds” for farm animal density.
+-   “herds” for farm animal density (aggregated from departmental
+    scale);
+-   “herds\_municipality” for farm animal density (aggregated from
+    municipality scale);
+-   “human” for human population density.
 
 The distribution of crops and animals can vary over time, but an initial
 analysis showed that these distributions were very stable from one year
